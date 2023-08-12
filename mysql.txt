@@ -1,0 +1,59 @@
+-- Active: 1691776580756@@127.0.0.1@3306
+show databases;
+# craete database commonad
+create database hello;
+#show database commond
+show databases;
+#use commond to select DATABASE
+use hello;
+# this craete a table using table commond
+create table cats(
+    cat_id  int not null  auto_increment,
+    name varchar(100),
+    age int ,
+    primary key(cat_id)
+
+);
+#this is insert data into table using insert commond;
+insert into cats(name,age) values ('ram',20),
+('radhika',45),
+('sonali',78),
+('maneesha',65),
+('mahesh',57),
+('vasudha',45),
+('anirudha',34),
+('riya',32),
+('pranjal',53),
+('akshay',87),
+('anjali',645),
+('nanshi',32);
+
+# this is show your table 
+select * from cats;
+#crud operation perform
+#read
+#where we use read the data into table on basic of row;
+#the syntax is select * from table name where you select any thing like name age 
+# the syntax is for cat we use 
+select * from cats where name ='radhika';
+select * from cats where age = 20;
+select * from cats where age >20;
+#update we update the data in table we use the attribute Set
+# the syntax is update table name set where coloumn name we change the data this coloumn here we USe
+#update work like this.
+
+update cats set name='radhika' 
+where name='mohan';
+update cats set age =20 where age =48;
+select * from cats;
+delete from cats where name ='radhika';
+select * from cats;
+delete from cats where name ='radhika';
+select * from cats;
+update cats set age =20 where age = 48;
+select * from cats;
+update cats set name='ram' 
+where age=48;
+select * from cats;
+delete from  cats where age <48;
+select * from cats;
